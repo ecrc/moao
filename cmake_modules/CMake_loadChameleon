@@ -1,0 +1,89 @@
+    ################################
+    # RUNTIME
+    ################################ 
+    # Create a list of possible runtime
+    set(CHAMELEON_SCHED_list "STARPU" "QUARK")
+
+    # Initially StarPU runtime is enabled
+    option(CHAMELEON_SCHED_STARPU
+        "Enable StarPU scheduler as the default runtime
+        (Conflict with other CHAMELEON_SCHED_* options)" ON)
+    option(CHAMELEON_SCHED_QUARK
+            "Enable Quark scheduler as the default runtime
+                    (Conflict with other CHAMELEON_SCHED_* options)" OFF)
+
+    if (CHAMELEON_SCHED_QUARK)
+        set(CHAMELEON_SCHED_STARPU OFF)
+    elseif (CHAMELEON_SCHED_STARPU)
+        set(CHAMELEON_SCHED_QUARK OFF)
+    endif()
+    if (CHAMELEON_SCHED_STARPU)
+        message("-- ${BoldGreen}CHAMELEON_SCHED_STARPU is set to ON: CHAMELEON uses StarPU runtime${ColourReset}")
+        #message("-- ${BoldGreen}To use CHAMELEON with QUARK runtime: set CHAMELEON_SCHED_QUARK"
+        #"to ON (CHAMELEON_SCHED_STARPU will be disabled)${ColourReset}")
+    elseif(CHAMELEON_SCHED_QUARK)
+        message( FATAL_ERROR "StarPU not not implemented yet." )
+        #message("-- ${BoldGreen}CHAMELEON_SCHED_QUARK is set to ON: CHAMELEON uses QUARK runtime${ColourReset}")
+        #message("-- ${BoldGreen}To use CHAMELEON with StarPU runtime: set CHAMELEON_SCHED_STARPU"
+        #"to ON (CHAMELEON_SCHED_QUARK will be disabled)${ColourReset}")
+    endif()
+
+
+    if(CHAMELEON_SCHED_STARPU)
+        find_package(STARPU)
+        if(NOT STARPU_FOUND)
+            message( FATAL_ERROR "StarPU not found." )
+        endif()
+        # add directories for include and lib
+        link_directories(${STARPU_LIBRARY_DIRS})
+        include_directories(${STARPU_INCLUDE_DIRS})
+        set(CHAMELEON_COMPONENT "STARPU")
+        list(INSERT link_lib 0 "${STARPU_LIBRARIES_DEP}" )
+
+    elseif(CHAMELEON_SCHED_QUARK)
+        find_package(QUARK)
+        if(NOT STARPU_FOUND)
+            message( FATAL_ERROR "Quark not found." )
+        endif()
+        # add directories for include and lib
+        link_directories(${QUARK_LIBRARY_DIRS})
+        include_directories(${QUARK_INCLUDE_DIRS})
+        set(CHAMELEON_COMPONENT "QUARK")
+
+    endif()
+
+    ################################ 
+    # GPU (cuda+magma)
+    ################################ 
+    if(GPU)
+        find_package(CUDA QUIET REQUIRED)
+        if(NOT CUDA_FOUND)
+            message( "Cuda not found." )                                                                              
+        else()
+            message("Cuda module found.\nUsing cuda")
+        endif()
+
+        #find_package(MAGMA)
+        #if(NOT MAGMA_FOUND)
+        #    message( FATAL_ERROR "magma not found." )
+        #endif()
+
+        #set(CHAMELEON_COMPONENT "${CHAMELEON_COMPONENT} MAGMA")
+    endif()
+
+
+    ################################
+    # CHAMELEON
+    ################################
+    find_package(CHAMELEON COMPONENTS STARPU)
+    if(NOT CHAMELEON_FOUND)
+        message( FATAL_ERROR "chameleon not found." )                                                                 
+    endif()
+    include_directories(${CHAMELEON_DIR_FOUND}/include)
+    include_directories(${CHAMELEON_INCLUDE_DIRS_DEP})
+    link_directories(${CHAMELEON_LIBRARY_DIRS})
+    list(INSERT  link_lib 0 "${CHAMELEON_LIBRARIES_DEP}" )
+
+
+
+

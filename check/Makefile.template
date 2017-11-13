@@ -1,0 +1,33 @@
+
+
+#user flags: ADJUST ACCORDINGLY !!!
+PLASMADIR  := $(PLASMA_ROOT)
+HWLOCDIR   := $(HWLOC_ROOT)
+FITSIODIR  := $(FITSIO_ROOT)
+OPENBLASDIR:= $(OPENBLAS_ROOT)
+
+CC=g++
+CFLAGS= -fPIC -shared 
+LDFLAGS = -fPIC -shared -L$(PLASMADIR)/lib -lplasma  -lcoreblasqw -lcoreblas -llapacke -lplasma -lquark  -llapacke  -lpthread -lm  -lpthread -lhwloc -L$(OPENBLASDIR)/lib -lopenblas  -L../lapack -lcfitsio
+OPTIM= -O3
+
+OUT= libcheck
+INC=  -I../common -I./  -I$(PLASMADIR)/include
+LIB=
+SRC= check_utils.c
+OBJ= $(SRC:.c=.o)
+
+all: $(OBJ)  
+	@echo "linking"
+	$(CC) $(LDFLAGS) $(OPTIM) $(OBJ) $(LIB) $(LFLAGS) -o $(OUT).so
+
+%.o: %.c
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+
+.PHONY: clean
+clean:
+	rm -rf $(OBJ) $(OUT).so
+
+
+

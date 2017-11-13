@@ -1,0 +1,10 @@
+    set(PROJECT_NAME moao_chameleon)
+    OPTION(USE_CHAMELEON "" ON)
+    OPTION(USE_LAPACK "" ON)
+
+    if(USE_GPU)
+        set(languages C )
+    else()
+        set(languages C)
+    endif()
+

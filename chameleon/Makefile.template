@@ -1,0 +1,66 @@
+# Common binaries
+
+NVCC = nvcc 
+CC   = gcc
+
+#user flags
+CHAMELEONDIR:=$(CHAMELEON_ROOT)
+OPENBLASDIR :=$(OPENBLAS_ROOT)
+HWLOCDIR    := 
+MAGMADIR    :=$(MAGMA_ROOT)
+CFITSIODIR  :=$(FITSIO_ROOT)
+STARPUDIR   :=$(STARPU_ROOT)
+STARPUINC   :=$(STARPUDIR)/include/starpu/1.2/
+
+LDFLAGS   := -L$(CHAMELEONDIR)/lib -lchameleon -lchameleon_starpu  -lcoreblas  -lm  -lpthread -lhwloc -L$(OPENBLASDIR)/lib -lopenblas -L../lapack  -L$(CFITSIODIR)/lib -lcfitsio -lfftw3  -L$(STARPUDIR)/lib -lstarpu-1.2  -L$(MPIDIR)/lib -lmpi -L$(MAGMADIR)/lib -lmagma  -lcublas
+
+# Extra user flags
+EXTRA_CCFLAGS = -I$(CHAMELEONDIR)/include/chameleon/ -I$(STARPUINC) -I$(OPENBLASDIR)/include -I../common -I../check 
+
+# Optimisation flags
+CCFLAGS +=  -O3
+
+#use matcov_tiled
+CCFLAGS += -DUSE_MATCOV_TILED -DUSE_INTERSAMPLE
+#check against yorick
+CCFLAGS +=# -DCHECK_CHAMELEON
+
+
+MAIN = moao_chameleon.c 
+
+DEP= common check
+
+#####################
+# default make rule #
+#####################
+
+TARGET = moao
+
+.PHONY: all
+all: $(DEP) $(TARGET) $(DEP)
+
+
+$(TARGET): $(MAIN) $(OBJ_FILES)
+	$(NVCC) $(CCFLAGS) $(EXTRA_CCFLAGS) $^ obj/matcov_tiled.o obj/intersample.o obj/check_utils.o -o $@ $(LDFLAGS) $(EXTRA_LDFLAGS)
+
+%.o: %.c
+	$(CC) -c $(CCFLAGS) $(EXTRA_CCFLAGS) $^ -o $@
+
+
+.PHONY: common
+common:
+	-@[ -e "obj/matcov_tiled.o" ] && mv obj/matcov_tiled.o ../common/
+	-@[ -e "obj/intersample.o" ] && mv obj/intersample.o ../common/
+	cd ../common; make -f Makefile.nico CC=$(CC) OPTIM=$(OPTIMCO)
+	mv ../common/*.o obj/
+
+.PHONY: check
+check:
+	-@[ -e "obj/check_utils*.o" ] && mv obj/check_utils.o ../check/
+	cd ../check; make -f Makefile.nico USE_PLASMA=-DUSE_PLASMA CC=$(CC) OPTIM=$(OPTIMCH)
+	mv ../check/*.o obj/
+
+
+.PHONY: clean
+clean:
+	rm -rf $(TARGET) obj/*.o

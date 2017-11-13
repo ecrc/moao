@@ -1,0 +1,30 @@
+
+CC=g++
+NVCC=
+CFLAGS= -Wall
+NVFLAGS=
+OPTIM= -O3
+
+SRC_C   = intersample.c
+SRC_CPP = matcov_tiled.cpp
+SRC_CU  = #matcov_gpu.cu
+
+OBJ=$(SRC_C:.c=.o)
+OBJ+=$(SRC_CPP:.cpp=.o)
+OBJ+=$(SRC_CU:.cu=.o)
+
+all: $(OBJ)
+	@echo "compiled: " $(OBJ)
+
+%.o:%.c
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) -o  $@ -c $<
+
+%.o:%.cpp
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) -o  $@ -c $<
+
+%.o:%.cu
+	@echo "compiling " $<
+	#TODO
+	#$(NVCC)  -o  $@ -c $<

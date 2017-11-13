@@ -1,0 +1,42 @@
+
+Trusted files for moao
+
+chameleon/moao_chameleon.c      Main program
+
+common/utils.c                  Read command line arguments & timer
+common/arguments.c              Command line arguments treatment
+common/fits.c                   Read/write fits files
+
+
+common/dscaldiag.c              Scaling square matrix diagonal 
+common/codelets_dscaldiag.c     Codelet (starpu) scaling square matrix diagonal
+
+common/matcov.c                 Covariance matrix generation
+common/codelet_matcov.c         Codelet (starpu) generating covariance matrix
+common/matcov_kernels.c         Kernels (cpu) for covariance matrix generation
+common/matcov_kernels_gpu.c     Kernels (gpu) for covariance matrix generation
+
+
+common/intersample.c            PSF generation & intersample ecommon/
+common/reconstructor.c          Solve R=Ctm.Cmm^-1
+common/cee_cvv.c                Compute cee& cvv matrices
+
+
+Compilation flags:
+USE_MATCOV_TILED Use real matrix generation (else use random)
+USE_INTERSAMPLE  Compute PSF after generating Cvv matrix
+CHECK_CHAMELEON  Compare computed matrices against data matrices (Cmm, Ctm, Ctt, R, Cee, Cvv, psf if intersample)
+
+with MATCOV_TILED
+./moao --n_cores=  --n_gpus=  --tile=  --maxrefine=  --maxobs=  --filePath=  --suffix=
+
+
+n_cores     Number of CPU cores to use
+n_gpus      Number of GPU devices to use
+tile        Tile size for chameleon
+max_refine  Number of outer loop iterations (long exposures)
+maxobs      Number of inner loop iterations (short exposures)
+filepath    Path to the system and atmospheric parameter files (and data matrices if CHECK_CHAMELEON is active)
+suffix      Suffix of data matrices in case CHECK_CHAMELEON is active. Cmm matrix must be stored in filePath"/cmm"suffix
+            Provide a atmosphere parameter file "profx-atmos-night0.txt" for each of them
+            where x is the index of the interation

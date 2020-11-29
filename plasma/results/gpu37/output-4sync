@@ -1,0 +1,170 @@
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   10240   10240   5120  0.00229        0.043        19.156    185.733    204.889        204.934    2043.385
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   12288   10240   5120  0.00226        0.041        24.075    216.562    240.637        240.681    2257.584
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   14336   10240   5120  0.00233        0.041        31.821    249.104    280.925        280.968    2447.036
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   16384   10240   5120  0.00230        0.042        39.404    281.563    320.967        321.011    2652.755
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   18432   10240   5120  0.00229        0.042        49.638    323.000    372.638        372.682    2779.017
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   20480   10240   5120  0.00234        0.042        62.445    361.467    423.911        423.956    2925.243
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   22528   10240   5120  0.00231        0.042        76.532    404.608    481.140        481.183    3045.146
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   24576   10240   5120  0.00230        0.041        92.569    451.006    543.575        543.619    3147.880
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   26624   10240   5120  0.00227        0.042        112.575   496.070    608.645        608.689    3250.185
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   28672   10240   5120  0.00228        0.042        130.006   545.546    675.551        675.596    3355.328
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   30720   10240   5120  0.00231        0.041        155.638   599.659    755.298        755.341    3411.686
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   32768   10240   5120  0.00265        0.041        176.521   647.839    824.360        824.403    3528.649
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   34816   10240   5120  0.00228        0.042        202.448   710.335    912.782        912.826    3574.870
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   36864   10240   5120  0.00230        0.041        234.718   767.924    1002.642        1002.685   3630.114
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   38912   10240   5120  0.00229        0.042        266.890   835.882    1102.772        1102.816   3662.593
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   40960   10240   5120  0.00231        0.042        301.238   897.102    1198.340        1198.384   3722.851
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   43008   10240   5120  0.00230        0.041        336.110   967.368    1303.477        1303.521   3764.295
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   45056   10240   5120  0.00230        0.042        376.609   1036.702   1413.311        1413.355   3803.516
+
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams
+Creating 2 exec streams

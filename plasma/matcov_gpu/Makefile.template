@@ -1,0 +1,47 @@
+CUDA_ROOT=/usr/local/cuda-5.5
+MKLROOT=/opt/intel/composer_xe_2013/mkl
+INTELROOT=/opt/intel/composer_xe_2013
+
+INC=-I$(CUDA_ROOT)/include -I$(MKLROOT)/include
+LIBPATH=-L$(CUDA_ROOT)/lib64 -L$(MKLROOT)/lib/intel64 \
+
+LIB=-lcudart -lcublas
+LIB+=-lmkl_intel_ilp64 -lmkl_core -lmkl_intel_thread -lpthread -lm -lstdc++
+
+CC=$(INTELROOT)/bin/icc
+NVCC=$(CUDA_ROOT)/bin/nvcc
+
+#COPTS+=-std=c99
+NVOPTS=-O3  --use_fast_math
+COPTS+= -O3 -Wall -DMKL_ILP64 -openmp
+LOPTS= -openmp
+
+CUSRC=matcov_gpu.cu matcov_gpu_gb.cu
+CSRC=test_matcov_gpu.cpp test_tabdphi_gpu.cpp test_cpm_gpu.cpp test_matcov_gpu_gb.cpp bm_matcov.cpp bm_matcov_2.cpp
+OTHERSRC=matcov.cpp
+
+CUOBJ=$(CUSRC:.cu=.cu_o)
+COBJ=$(CSRC:.cpp=.o) $(OTHERSRC:.cpp=.o)
+OTHEROBJ=$(OTHERSRC:.cpp=.o)
+EXE=$(CSRC:.cpp=)
+
+ALL_OBJ=$(CUOBJ) $(COBJ)
+
+%.cu_o: %.cu
+	$(NVCC) $(NVOPTS) $(INC) -arch=compute_35 -code=sm_35 -c $< -o $@ 
+
+%.o : %.cpp
+	$(CC) $(COPTS) $(INC) -c $< -o $@
+
+test%:test%.o $(CUOBJ) $(OTHEROBJ)
+	$(CC) $(LOPTS) $< $(CUOBJ) $(OTHEROBJ) -o $@ $(LIBPATH) $(LIB) 
+
+bm%:bm%.o $(CUOBJ) $(OTHEROBJ)
+	$(CC) $(LOPTS) $< $(CUOBJ) $(OTHEROBJ) -o $@ $(LIBPATH) $(LIB) 
+
+all: $(EXE)
+
+$(EXE): $(ALL_OBJ)
+
+clean:
+	rm -fv $(ALL_OBJ) $(EXE)

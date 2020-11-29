@@ -1,0 +1,53 @@
+# Common binaries
+CC             = mnvcc --ompss
+
+#icc -o tr_plasma tr_plasma.o -L/home/ltaiefh/codes/plasma/plasma-installer/install/lib -lcoreblasqw -lcoreblas -lplasma -lcoreblasqw -lcoreblas -lquark -llapacke -mkl=parallel -L/home/ltaiefh/codes/hwloc-1.8.1/install/lib -lhwloc
+
+#user flags
+PLASMADIR := /home/ltaiefh/ecrc/codes/plasma-runtimes/install
+HWLOCDIR  := /home/ltaiefh/codes/hwloc-1.8.1/install
+FITSIODIR := /home/ltaiefh/codes/cfitsio/install
+#CCFLAGS   := -Wall -Wl,--no-as-needed
+#LDFLAGS   := -L/home/ltaiefh/codes/plasma/plasma-installer_2.6.0-gcc/install/lib -L$(PLASMADIR)/quark -L$(PLASMADIR)/lib -lcoreblasqw -lcoreblas -lplasma -lcoreblasqw -lcoreblas -lquark -llapacke -L$(FITSIODIR)/lib -lfftw3 -lcfitsio -L/opt/share/INTEL/v15.app/composer_xe_2015.0.090/mkl/lib/intel64 -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -L$(HWLOCDIR)/lib -lhwloc
+#LDFLAGS   := -L$(PLASMADIR)/lib -lruntime -lcoreblasqw -lcoreblas -lplasma -lruntime -lcoreblasqw -lcoreblas -lquark -llapacke -L/opt/share/INTEL/v15.app/composer_xe_2015.0.090/mkl/lib/intel64 -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -L$(HWLOCDIR)/lib -lhwloc
+LDFLAGS   := -L$(PLASMADIR)/lib -lplasma  -lcoreblasqw -lcoreblasrw -lruntime -lcoreblas -lplasma -lquark  -L/home/ltaiefh/codes/plasma/plasma-installer_2.6.0-gcc/install/lib -llapacke  -L/opt/share/INTEL/v15.app/composer_xe_2015.0.090/mkl/lib/intel64 -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread -lm  -lpthread -lm -L/home/ltaiefh/codes/hwloc-1.8.1/install/lib -lhwloc $(PLASMADIR)/lib/libruntime.a $(PLASMADIR)/lib/libcoreblasqw.a $(PLASMADIR)/lib/libcoreblasrw.a
+
+# Extra user flags
+#EXTRA_CCFLAGS = -I$(PLASMADIR)/include -I/home/ltaiefh/codes/plasma/trunk/control -I/home/ltaiefh/codes/cfitsio/install/include
+EXTRA_CCFLAGS = -I$(PLASMADIR)/include -I/home/ltaiefh/codes/cfitsio/install/include
+
+# Instrumentation flags
+#CCFLAGS += --instrument
+
+# Optimisation flags
+CCFLAGS += -O3 
+
+# DEBUG flags
+#CCFLAGS   += --debug
+
+# PIC flags
+#CCFLAGS   += -fPIC 
+
+MAIN = moao_plasma.c
+#SOURCE_FILES = $(filter-out $(MAIN), $(wildcard *.c))
+OBJ_FILES = $(patsubst %.c,%.o,$(SOURCE_FILES))
+
+#####################
+# default make rule #
+#####################
+
+TARGET = moao_plasma
+
+.PHONY: all
+all: $(TARGET)
+
+
+$(TARGET): $(MAIN) $(SOURCE_FILES)
+	$(CC) $(CCFLAGS) $(EXTRA_CCFLAGS) $^ -o $@ $(LDFLAGS) $(EXTRA_LDFLAGS)
+
+%.o: %.c
+	$(CC) -c $(CCFLAGS) $(EXTRA_CCFLAGS) $^ -o $@
+
+.PHONY: clean
+clean:
+	rm -rf $(TARGET) *.o

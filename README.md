@@ -42,9 +42,9 @@ make
 Execution
 ----------
 In order to run the MOAO simulation, some values must be defined:
-* the number of core : n_cores
-* the number of GPUs (if cuda is enabled): n_gpus
-* the tile size : tile
+* the number of core : ncores
+* the number of GPUs (if cuda is enabled): ngpus
+* the tile size : ts
 * the number of short exposure performed with a single tomographic reconstructor : maxobs
 * the number of tomographic reconstructor used a long exposure : maxrefine
 * the path to the system parameters : sys_path
@@ -52,7 +52,7 @@ In order to run the MOAO simulation, some values must be defined:
 
 Run the following command with the actual values:
 ~~~
-./moao --n_cores= --n_gpus= --tile= --maxrefine= --maxobs= --sys_path= --atm_path=
+./moao --ncores= --ngpus= --ts= --maxrefine= --maxobs= --sys_path= --atm_path=
 ~~~
 
 Inputs
@@ -81,10 +81,10 @@ This project has several dependencies listed below.
 
 ### Simulation ###
 
-* chameleon     (https://project.inria.fr/chameleon/)
-* starpu        (http://starpu.gforge.inria.fr/)
-* cfitsio       (https://heasarc.gsfc.nasa.gov/fitsio/)
-* fftw3         (http://www.fftw.org/)
+* chameleon     (https://project.inria.fr/chameleon/ last version tested: gitlab commit 8595b23c )
+* starpu        (http://starpu.gforge.inria.fr/ last version tested: 1.2.3)
+* cfitsio       (https://heasarc.gsfc.nasa.gov/fitsio/ last version tested: 3.420)
+* fftw3         (http://www.fftw.org/ last version tested: 3.3.7)
 
 And, optionally: 
 * cuda
@@ -106,17 +106,20 @@ provide all these dependencies.
 
 References
 ==========
-1. H. Ltaief, D. Gratadour, A. Charara, and E. Gendron, Adaptive Optics Simulation for the
+1. N. Doucet, H. Ltaief, D. Gratadour and D. Keyes, Mixed-Precision Tomographic Reconstructor 
+Computations on Hardware Accelerators, *2019 IEEE/ACM 9th Workshop on Irregular Applications: 
+Architectures and Algorithms (IA3)*, Denver, CO, USA, pp. 31-38, doi: 10.1109/IA349570.2019.00011, 2019.
+2. H. Ltaief, D. Gratadour, A. Charara, and E. Gendron, Adaptive Optics Simulation for the
 World's Biggest Eye on Multicore Architectures with Multiple GPUs, *ACM Platform for
 Advanced Scientific Computing*, 2016.
-2. E. Gendron, A. Charara, A. Abdelfattah, D. Gratadour, D. Keyes, H. Ltaief, C. Morel, F.
+3. E. Gendron, A. Charara, A. Abdelfattah, D. Gratadour, D. Keyes, H. Ltaief, C. Morel, F.
 Vidal, A. Sevin, and G. Rousset, A Novel Fast and Accurate Pseudo-Analytical Simulation Approach
 for MOAO", *in Adaptive Optics Systems IV, Proceedings of the SPIE 9148*, 2014.
-3. A. Charara, H. Ltaief, D. Gratadour, D. Keyes, A. Sevin, A. Abdelfattah, E. Gendron and C.
+4. A. Charara, H. Ltaief, D. Gratadour, D. Keyes, A. Sevin, A. Abdelfattah, E. Gendron and C.
 Morel, and F. Vidal, Pipelining Computational Stages of the Tomographic Reconstructor for
 Multi-object Adaptive Optics on a Multi-GPU System, *Proceedings of the ACM International
 Conference for High Performance Computing, Networking, Storage and Analysis*, pp. 262-273, 2014.
-4. A. Abdelfattah, E. Gendron, D. Gratadour, D. Keyes, H. Ltaief, A. Sevin, and F. Vidal, High
+5. A. Abdelfattah, E. Gendron, D. Gratadour, D. Keyes, H. Ltaief, A. Sevin, and F. Vidal, High
 Performance Pseudo-analytical Simulation of Multi-Object Adaptive Optics over Multi-GPU
 Systems, *Proceedings of the 20th International Euro-Par Conference*, vol. 8632, pp .704–715, 2014.
 
@@ -128,4 +131,4 @@ Please feel free to create an issue on Github for any questions and inquiries.
 
 Handout
 ========
-![Handout](docs/MOAO-handout-final.png)
+![Handout](docs/astronomy-handout-final.png)

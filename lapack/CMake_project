@@ -1,0 +1,5 @@
+    set(PROJECT_NAME moao_lapack)
+    set(USE_LAPACK True)
+
+    set(languages C)
+

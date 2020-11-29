@@ -1,0 +1,70 @@
+# Common binaries
+CC             = mpicc -cc=icc
+CXX            = mpicc -cc=icpc
+FC             = mpif90 -fc=ifort
+LD             = mpif90 -fc=ifort
+#CC             = mpicc
+#CXX            = mpicxx
+#FC             = mpif90
+#LD             = mpif90
+
+CFLAGS= -Wall -fPIC
+LFLAGS= -nofor_main -lm -lstdc++
+#LFLAGS= -lm -lstdc++
+OPTIM= -O3
+
+SCALAPACKROOT:=$(HOME)/codes/scalapack_installer-intel/install
+#SCALAPACKROOT:=$(HOME)/codes/scalapack_installer-gnu/install
+OPENBLASROOT:=$(HOME)/codes/OpenBLAS-intel/install
+#OPENBLASROOT:=$(HOME)/codes/OpenBLAS-gcc
+CFITSIOROOT:=$(HOME)/codes/cfitsio/install
+
+#CFLAGS+= -DUSE_INTERSAMPLE 
+CFLAGS+= -DCHECK_SCALAPACK -DUSE_INTERSAMPLE -DUSE_SINGLE -DMATCOV_SCALAPACK
+
+LDFLAGS= 
+
+EXE= test_moao_scalapack
+INC= -I$(SCALAPACKROOT)/include -I$(OPENBLASROOT)/include -I../common -I$(CFITSIOROOT)/include -I../check -I.
+LIB= -L$(SCALAPACKROOT)/lib -L$(OPENBLASROOT)/lib -L$(CFITSIOROOT)/lib -lscalapack -lcfitsio -lfftw3 -lopenblas
+SRC=  moao_scalapack.c 
+OBJ=$(SRC:.c=.o)
+MAIN= test_moao_scalapack.o
+COMMON= matcov_tiled.o fits.o intersample.o
+CHECK= check_utils.o
+
+OBJ+= $(COMMON) $(CHECK)
+
+all: $(OBJ) $(MAIN)
+	@echo "linking"
+	$(FC)  $(OPTIM) $(MAIN) $(OBJ)  $(LFLAGS) $(LIB) -o $(EXE)
+
+matcov_tiled.o:../common/matcov_tiled.cpp
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+	@echo "compiling " $< "done"
+
+intersample.o :../common/intersample.c
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+	@echo "compiling " $< "done"
+
+fits.o        :../common/fits.c
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+	@echo "compiling " $< "done"
+
+check_utils.o:../check/check_utils.c 
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+	@echo "compiling " $< "done"
+
+%.o: %.c
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+	@echo "compiling " $< "done"
+
+
+.PHONY: clean
+clean:
+	rm -rf $(OBJ) $(MAIN) $(EXE)

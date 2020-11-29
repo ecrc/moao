@@ -1,0 +1,1 @@
+make all; export MKL_NUM_THREADS=1; mpirun -np 36 ./moao_scalapack --nprow=6 --npcol=6 --nb=64 --nmeas=10240 --nmeasts=10240 --nact=5120 --maxrefine=2 --maxobs=3 --v

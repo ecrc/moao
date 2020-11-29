@@ -1,0 +1,42 @@
+module switch PrgEnv-cray/5.2.82 PrgEnv-intel
+module load fftw/3.3.4.5
+
+We cannot use scalapack from Cray libSCI, unfortunately! We raised the 32-bit integer issue with the Cray user group.
+In the meantime, we have to install scalapack on shaheen and apply a patch:
+
+###################################
+p?gemr2d fails when redistributing matrix from one context to another due to the 32-bit function:
+void *
+mr2d_malloc(n)
+  int   n;
+{
+  void *ptr;
+  assert(n > 0);
+  ptr = (void *) malloc(n);
+  if (ptr == NULL) {
+    fprintf(stderr, "xxmr2d:out of memory\n");
+    exit(2);
+  }
+  return ptr;
+}
+
+as defined in REDIST/SRC/pgemraux.c, in which the int n should be replaced by long int.
+###################################
+
+
+Install cfitsio:
+CC=cc ./configure --prefix=/project/k1217/where-to-install/install --host=x86_64-unknown-linux-gnu
+make -j
+make -j install
+
+cp Makefile.shaheen Makefile
+
+Edit the Makefile for the cfitsio path
+
+cp moao.sh.template moao.sh
+
+Edit moao.sh accordingly to run MOAO
+
+sbatch moao.sh
+
+All the best!

@@ -1,0 +1,72 @@
+tel diam in meters
+39
+cent obs
+0.2
+Tframe s
+0.004
+N WFS
+7
+nlgs
+3
+nTarget
+1
+Nssp n subaps per wfs
+10
+GsAlt
+1e-05 1e-05 1e-05 0 0 0 0  
+type
+2 2 2 1 1 1 1  
+alphaX in arcsec //the last value is for the truth sensor, overwrite by the function matcov_init_tomo_tiled
+23 -11.5 -11.5 -16 -32 52 0  
+alphaY in arcsec //the last value is for the truth sensor, overwrite by the function matcov_init_tomo_tiled
+0 19.9186 -19.9186 -36 38 -5 0  
+XPup
+0 0 0 0 0 0 0  
+YPup
+0 0 0 0 0 0 0  
+thetaML
+0 0 0 0 0 0 0  
+thetaCam
+0 0 0 0 0 0 0  
+sensibilite
+1 1 1 1 1 1 1  
+tracking
+0 0 0  
+pasDphi
+0.0001
+ncpu
+12
+magnitude of NGS
+13. 13. 13. 13.
+Flux for LGS
+6e7
+pixel size for ngs
+0.3
+pixel size for lgs
+1
+wave length for NGS (meters)
+650e-9
+wave length for LGS (meters)
+589e-9
+bandwidth
+3300e-10
+transmission for NGS
+0.425
+transmission for LGS
+0.382
+atmosphere transmission
+0.84
+Read Out Noise (nb of e-)
+3
+lgs_cst
+1
+spot_width arcsec
+1
+lgs_alt (m)
+100000
+lgs_depth (m)
+5000
+targetX  in arcsec
+0
+targetY  in arcsec
+0

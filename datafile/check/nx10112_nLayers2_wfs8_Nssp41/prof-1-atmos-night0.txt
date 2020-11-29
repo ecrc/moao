@@ -1,0 +1,10 @@
+Nlayer
+2
+r0 @ wfs lambda
+0.128916
+cn2 ESO units
+28.5115 1.88506  
+h in meters
+30 12500  
+l0 in meters
+25 25 

@@ -1,0 +1,52 @@
+# Common binaries
+CC             = icc
+
+#user flags: ADJUST ACCORDINGLY !!!
+PLASMADIR := $(HOME)/codes/plasma-installer_2.8.0-intel/install
+HWLOCDIR  := $(HOME)/codes/hwloc-1.10.1/install
+FITSIODIR := $(HOME)/codes/cfitsio/install
+
+
+# Extra user flags
+CCFLAGS   := -mkl=sequential -Wall -Wl,--no-as-needed -I../common
+LDFLAGS   := -L$(PLASMADIR)/lib -lplasma -lcoreblasqw -lcoreblas -lplasma -lquark -llapacke -lm -lpthread -L$(HWLOCDIR)/lib -lhwloc
+EXTRA_CCFLAGS = -I$(PLASMADIR)/include -I$(FITSIODIR)/include
+
+# Optimisation flags
+CCFLAGS += -O3
+
+# Read from files
+#CCFLAGS += -DUSE_MATCOV_TILED
+
+# DEBUG flags
+#CCFLAGS   += -g
+
+# PIC flags
+#CCFLAGS   += -fPIC 
+
+MAIN = moao_plasma.c ../common/matcov_tiled.cpp
+#SOURCE_FILES = $(filter-out $(MAIN), $(wildcard *.c))
+OBJ_FILES = $(patsubst %.c,%.o,$(SOURCE_FILES))
+
+#####################
+# default make rule #
+#####################
+
+TARGET = moao_plasma
+
+.PHONY: all
+all: $(TARGET)
+
+
+$(TARGET): $(MAIN) $(SOURCE_FILES)
+	$(CC) $(CCFLAGS) $(EXTRA_CCFLAGS) $^ -o $@ $(LDFLAGS) $(EXTRA_LDFLAGS)
+
+%.o: %.c
+	$(CC) -c $(CCFLAGS) $(EXTRA_CCFLAGS) $^ -o $@
+
+matcov_%.o: ../common/matcov_%.cpp
+	$(CC) -c $(CCFLAGS) $(EXTRA_CCFLAGS) $< -o $@
+
+.PHONY: clean
+clean:
+	rm -rf $(TARGET) *.o

@@ -1,0 +1,64 @@
+============================================
+Notes for ompss software stack installation:
+============================================
+
+module add intel/15
+export TARGET=/opt/runtime/ompss
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Check if lib, libxml2, BOOST are already installed in the system.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+binutils-2.25
+=============
+FC=ifort CXX="icpc -fPIC" CC="icc -fPIC" CFLAGS=-fPIC CXXFLAGS="-fPIC -I/usr/include/x86_64-linux-gnu/c++/4.8" LDFLAGS=-fPIC ./configure --prefix=path_to_install --with-pic --enable-shared
+make -j 6
+make -j 6 install
+
+libunwind-1.1
+=============
+FC=ifort CXX="icpc -fPIC" CC="icc -fPIC" CFLAGS=-fPIC CXXFLAGS="-fPIC -I/usr/include/x86_64-linux-gnu/c++/4.8" LDFLAGS=-fPIC ./configure --prefix=path_to_install --with-pic --enable-shared
+make -j 6
+make -j 6 install
+
+export LD_LIBRARY_PATH=path_to_install_binutils-2.25_lib:path_to_install_liblibunwind-1.1_lib:$LD_LIBRARY_PATH
+
+papi-5.4.1
+==========
+To be installed if performance counters needed to be instrumented with extra.
+
+
+extrae-3.0.1
+============
+CXX=icpc CC=icc FC=ifort LDFLAGS="-fPIC -Lpath_to_install_binutils-2.25_lib -Lpath_to_install_liblibunwind-1.1_lib" LIBS="-lbfd -liberty" CFLAGS="-fPIC -I/usr/local/include -I/usr/include/libxml2" CXXFLAGS=-fPIC ./configure --prefix=$TARGET --without-mpi --without-dyninst --enable-heterogeneous --with-unwind=path_to_install_liblibunwind-1.1 --with-papi-libs=/usr/lib/x86_64-linux-gnu --with-papi-headers=/usr/include --with-cuda=/usr/local/cuda --with-binutils=path_to_install_binutils-2.25 --with-xml-prefix=/usr/lib/x86_64-linux-gnu --with-papi=/usr/local --enable-shared --with-pic
+make -j 16
+make install
+
+nanox-0.9a
+==========
+FC="ifort" CXX="icpc" CC="icc" CXXFLAGS="-fPIC -I/usr/include/x86_64-linux-gnu/c++/4.8" LDFLAGS=-fPIC LIBS=-fPIC ./configure --prefix=$TARGET --with-extrae=$TARGET --enable-shared --with-pic --disable-mpi --disable-opencl-arch
+
+make -j 6
+make -j 6 install
+
+mcxx-1.99.7
+===========
+CC=gcc-4.9 CXX=g++-4.9 FC=gfortran-4.9 CXXFLAGS="-fPIC -I/usr/include/x86_64-linux-gnu/c++/4.8" ./configure --prefix=$TARGET --enable-ompss --with-nanox=$TARGET --with-cuda=/usr/local/cuda
+
+make -j 6
+make -j 6 install
+
+
+###################################
+If you read this, You are the best!
+###################################
+
+
+
+Edit .bashrc
+
+# OMPSS
+export PATH=path_to_ompss_bin:$PATH
+export LD_LIBRARY_PATH=path_to_ompss_lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=path_to_ompss_pkgconfig:$PKG_CONFIG_PATH

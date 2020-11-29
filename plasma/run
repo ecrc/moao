@@ -1,0 +1,1 @@
+NX_ARGS="--summary --disable-ut --disable-cuda --smp-workers=36" ./moao_plasma --n_cores=1 --nmeas=10240 --nmeasts=10240 --nact=5120 --tile=1024 --maxrefine=2 --maxobs=3 --ompss --v

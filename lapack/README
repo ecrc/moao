@@ -1,0 +1,20 @@
+
+Trusted files for moa_chameleon
+
+lapack/test_moao_lapack.c       main program
+
+check/check_utils.c             contain utils function in particular matrix comparison
+
+common/fits.c                   read/write fits files
+
+common/matcov_tiled.cpp	        covariance matrix generation
+
+lapack/moao_lapack.c            function for reconstructor (R=Ctm.Cmm^-1), cee and cvv comptation
+common/intersample.c            psf generation & intersample common/
+
+usage
+./test_moao_lapack --filePath= --suffix=
+
+argument list:
+filepath    path to the system and atmospheric parameter files (and data matrices if CHECK_LAPACK is active)
+suffix      suffix of data matrices in case CHECK_LAPACK is active. Cmm matrix must be stored in filePath"/cmm"suffix

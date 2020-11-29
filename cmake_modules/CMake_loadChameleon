@@ -34,20 +34,18 @@
         if(NOT STARPU_FOUND)
             message( FATAL_ERROR "StarPU not found." )
         endif()
-        # add directories for include and lib
-        link_directories(${STARPU_LIBRARY_DIRS})
-        include_directories(${STARPU_INCLUDE_DIRS})
         set(CHAMELEON_COMPONENT "STARPU")
-        list(INSERT link_lib 0 "${STARPU_LIBRARIES_DEP}" )
+        # add directories for include and lib
+        message(STATUS "STARPU USES VARIABLES: STARPU_LIBRARY_DIRS ,STARPU_LIBRARIES_DEP, STARPU_INCLUDE_DIRS")
 
     elseif(CHAMELEON_SCHED_QUARK)
         find_package(QUARK)
         if(NOT STARPU_FOUND)
             message( FATAL_ERROR "Quark not found." )
         endif()
-        # add directories for include and lib
-        link_directories(${QUARK_LIBRARY_DIRS})
-        include_directories(${QUARK_INCLUDE_DIRS})
+        # add directories for include and lib #TODO
+        #link_directories(${QUARK_LIBRARY_DIRS})
+        #include_directories(${QUARK_INCLUDE_DIRS})
         set(CHAMELEON_COMPONENT "QUARK")
 
     endif()
@@ -79,11 +77,5 @@
     if(NOT CHAMELEON_FOUND)
         message( FATAL_ERROR "chameleon not found." )                                                                 
     endif()
-    include_directories(${CHAMELEON_DIR_FOUND}/include)
-    include_directories(${CHAMELEON_INCLUDE_DIRS_DEP})
-    link_directories(${CHAMELEON_LIBRARY_DIRS})
-    list(INSERT  link_lib 0 "${CHAMELEON_LIBRARIES_DEP}" )
 
-
-
-
+    message(STATUS "CHAMELEON USES VARIABLES: CHAMELEON_LIBRARY_DIRS, CHAMELEON_LIBRARIES_DEP, CHAMELEON_INCLUDE_DIRS_DEP")

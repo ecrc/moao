@@ -1,0 +1,44 @@
+tel diam in meters
+39
+cent obs
+0.2
+N WFS
+10
+Nssp n subaps per wfs
+86
+GsAlt
+1e-05 1e-05 1e-05 1e-05 1e-05 0 0 0 0  
+type
+2 2 2 2 2 1 1 1 1  
+nlgs
+5
+alphaX in arcsec //the last value is for the truth sensor, overwrite by the function matcov_init_tomo_tiled
+23 7.10739 -18.6074 -18.6074 7.10739 -16 -32 52 -52 0  
+alphaY in arcsec //the last value is for the truth sensor, overwrite by the function matcov_init_tomo_tiled
+0 21.8743 13.5191 -13.5191 -21.8743 -36 38 -5  -5 0  
+XPup
+0 0 0 0 0 0 0 0 0  
+YPup
+0 0 0 0 0 0 0 0 0  
+thetaML
+0 0 0 0 0 0 0 0 0  
+thetaCam
+0 0 0 0 0 0 0 0 0  
+sensibilite
+1 1 1 1 1 1 1 1 1  
+tracking
+0 0 0  
+pasDphi
+0.0001
+ncpu
+12
+lgs_cst
+1
+noise_var
+0.01
+spot_width arcsec
+1
+lgs_alt (m)
+100000
+lgs_depth (m)
+5000

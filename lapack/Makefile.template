@@ -1,0 +1,95 @@
+
+FC=gfortran
+CC=gcc
+CFLAGS= -Wall -fPIC
+LFLAGS=  -lm -lstdc++
+OPTIM= -g -fopenmp
+
+OPENBLASROOT:=$(OPENBLASROOT)
+CFITSIOROOT:=$(CFITSIOROOT)
+
+CFLAGS+= -DUSE_INTERSAMPLE
+#CFLAGS+= -DCHECK_LAPACK
+#CFLAGS+= -DUSE_SINGLE
+CFLAGS+= -DUSE_OPENMP
+CFLAGS+= -DUSE_LAPACK
+
+LDFLAGS= 
+
+EXE= test_moao_lapack
+INC= -I$(OPENBLASROOT)/include/ -I../common -I$(CFITSIOROOT)/include -I../check /
+LIB= -L$(OPENBLASROOT)/lib -lopenblas -L$(CFITSIOROOT)/lib -lcfitsio -lfftw3
+SRC=  moao_lapack.c 
+OBJ=$(SRC:.c=.o)
+MAIN= test_moao_lapack.o
+#COMMON= matcov_tiled.o fits.o intersample.o noise.o 
+COMMON= tomo_struct.o arguments.o fits.o intersample.o noise.o utils.o matcov.o matcov_kernels.o
+CHECK= check_utils.o
+
+OBJ+= $(COMMON) $(CHECK)
+
+all: $(OBJ) $(MAIN)
+	@echo "linking"
+	$(CC)  -shared $(OPTIM) $(OBJ)  $(LFLAGS) $(LIB) -o libmoao_lapack.so
+	$(CC)  $(OPTIM) $(MAIN) $(OBJ)  $(LFLAGS) $(LIB) -o $(EXE)
+
+
+test_moao_lapack.o:test_moao_lapack.c
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+	@echo "compiling " $< "done"
+
+moao_lapack.o:moao_lapack.c
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+	@echo "compiling " $< "done"
+
+#matcov_tiled.o:../common/matcov_tiled.cpp
+#	@echo "compiling " $<
+#	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+#	@echo "compiling " $< "done"
+
+#tomo_struct.o:../common/tomo_struct.c
+#	@echo "compiling " $<
+#	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+#	@echo "compiling " $< "done"
+#
+#arguments.o:../common/arguments.c
+#	@echo "compiling " $<
+#	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+#	@echo "compiling " $< "done"
+#
+#intersample.o :../common/intersample.c
+#	@echo "compiling " $<
+#	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+#	@echo "compiling " $< "done"
+#
+#noise.o :../common/noise.c
+#	@echo "compiling " $<
+#	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+#	@echo "compiling " $< "done"
+#
+#fits.o        :../common/fits.c
+#	@echo "compiling " $<
+#	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+#	@echo "compiling " $< "done"
+#
+#utils.o:../common/utils.c
+#	@echo "compiling " $<
+#	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+#	@echo "compiling " $< "done"
+
+check_utils.o:../check/check_utils.c 
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+	@echo "compiling " $< "done"
+
+%.o: ../common/%.c
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+	@echo "compiling " $< "done"
+
+
+.PHONY: clean
+clean:
+	rm -rf $(OBJ) $(EXE)

@@ -1,0 +1,35 @@
+
+CC=icpc
+CFLAGS= -Wall  -fPIC
+LFLAGS= -fPIC -shared
+OPTIM= -O3
+
+LDFLAGS=
+
+OUT= liblapack_pipe
+EXE= lapack_pipe
+INC= 
+LIB= -mkl=parallel -lm
+SRC= lapack_pipe.c ../common/matcov_tiled.cpp
+TMP= $(notdir $(SRC))
+TMP1= $(TMP:.c=.o)
+OBJ= $(TMP1:.cpp=.o)
+
+all: $(OBJ)  
+	@echo "linking"
+	$(CC) $(LFLAGS) $(OPTIM) $(OBJ) $(LIB) -o $(OUT).so
+	$(CC) $(LDFLAGS) $(OPTIM) $(OBJ) $(LIB) -o $(EXE).exe
+
+
+matcov_tiled.o: ../common/matcov_tiled.cpp
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+
+%.o: %.c
+	@echo "compiling " $<
+	$(CC) $(CFLAGS) $(OPTIM) $(INC) -o $@ -c $<
+
+clean:
+	rm -rf $(OBJ) $(OUT).so
+
+

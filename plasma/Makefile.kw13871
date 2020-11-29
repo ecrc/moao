@@ -1,0 +1,48 @@
+# Common binaries
+CC             = icc
+
+#icc -o tr_plasma tr_plasma.o -L/home/ltaiefh/codes/plasma/plasma-installer/install/lib -lcoreblasqw -lcoreblas -lplasma -lcoreblasqw -lcoreblas -lquark -llapacke -mkl=parallel -L/home/ltaiefh/codes/hwloc-1.8.1/install/lib -lhwloc
+
+#user flags
+PLASMADIR := /home/ltaiefh/codes/plasma/plasma-installer/install
+HWLOCDIR  := /home/ltaiefh/codes/hwloc-1.8.1/install
+FITSIODIR := /home/ltaiefh/codes/cfitsio/install
+CCFLAGS   := -Wall
+LDFLAGS   := -L$(PLASMADIR)/lib -lcoreblasqw -lcoreblas -lplasma -lcoreblasqw -lcoreblas -lquark -llapacke -L$(FITSIODIR)/lib -lfftw3 -lcfitsio -mkl=parallel -L$(HWLOCDIR)/lib -lhwloc
+
+# Extra user flags
+#EXTRA_CCFLAGS = -I$(PLASMADIR)/include -I/home/ltaiefh/codes/plasma/trunk/control -I/home/ltaiefh/codes/cfitsio/install/include
+EXTRA_CCFLAGS = -I$(PLASMADIR)/include -I/home/ltaiefh/codes/cfitsio/install/include
+
+# Optimisation flags
+CCFLAGS += -O3 
+
+# DEBUG flags
+#CCFLAGS   += -g
+
+# PIC flags
+#CCFLAGS   += -fPIC 
+
+MAIN = moao_plasma.c
+#SOURCE_FILES = $(filter-out $(MAIN), $(wildcard *.c))
+OBJ_FILES = $(patsubst %.c,%.o,$(SOURCE_FILES))
+
+#####################
+# default make rule #
+#####################
+
+TARGET = moao_plasma
+
+.PHONY: all
+all: $(TARGET)
+
+
+$(TARGET): $(MAIN) $(SOURCE_FILES)
+	$(CC) $(CCFLAGS) $(EXTRA_CCFLAGS) $^ -o $@ $(LDFLAGS) $(EXTRA_LDFLAGS)
+
+%.o: %.c
+	$(CC) -c $(CCFLAGS) $(EXTRA_CCFLAGS) $^ -o $@
+
+.PHONY: clean
+clean:
+	rm -rf $(TARGET) *.o

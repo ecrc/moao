@@ -1,0 +1,39 @@
+HOWTO compile/install the software dependencies for MOAO? 
+
+========================================================
+Optimized BLAS
+========================================================
+1) Intel MKL
+2) AMD ACML 
+3) OpenBLAS 
+
+Do NOT use reference netlib BLAS, please!
+
+========================================================
+HWLOC: Portable Hardware Locality 
+========================================================
+1) Download tarball from http://www.open-mpi.org/software/hwloc/v1.10/ 
+2) ./configure --prefix=hwloc_install_dir
+3) make
+4) make install 
+5) export PKG_CONFIG_PATH=$hwloc_install_dir/lib/pkgconfig:$PKG_CONFIG_PATH
+
+========================================================
+PLASMA
+========================================================
+1) Download the python installer from http://icl.cs.utk.edu/plasma/software/index.html
+2) This command should usually install PLASMA out of the box with Intel MKL BLAS :)
+./setup.py --cc="icc -O2 -DPLASMA_WITH_MKL" --fc="ifort -O2 -DPLASMA_WITH_MKL" --ldflags_fc="-nofor_main" --blaslib=-mkl=parallel --downall --notesting 
+More options:
+./setup.py --help
+3) export PKG_CONFIG_PATH=$plasma_dir/install/lib/pkgconfig:$PKG_CONFIG_PATH
+
+========================================================
+MOAO
+========================================================
+1) Adjust Makefile
+2) make -f MakefileName
+3) Run:
+./moao_plasma --n_cores=16 --nrow=1000 --ncol=1000 --tile=200
+More options:
+./moao.plasma --help

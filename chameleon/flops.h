@@ -360,4 +360,8 @@
   //TODO generate a correct formula
 #endif
 
+
+#define FLOPS_reconstructor(__m,__n) (FLOPS_DPOTRF(__m) + 2. * FLOPS_DTRSM(MorseRight, __n, __m))
+#define FLOPS_CeeCvv(__m,__mts,__nact) ( FLOPS_DSYR2K(__mts, __m) + FLOPS_DSYMM(MorseRight, __mts, __m) + FLOPS_DGEMM(__mts, __mts, __m) + FLOPS_DSYMM(MorseRight, __nact, __mts) + FLOPS_DGEMM(__nact, __nact, __mts))
+
 #endif /* _FLOPS_H_ */

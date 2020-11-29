@@ -1,0 +1,58 @@
+# Common binaries
+#CC             = mpicc -cc=icc
+#FC             = mpif90 -cc=ifort
+#LD             = mpif90 -fc=ifort
+CC             = mpicc
+CXX            = mpicxx
+FC             = mpif90
+LD             = mpif90
+
+#user flags
+PLASMADIR := $(HOME)/codes/plasma-installer_2.8.0-gnu/install
+SCALAPACKDIR := $(HOME)/codes/scalapack_installer-gnu/install
+FITSIODIR := $(HOME)/codes/cfitsio/install
+CCFLAGS   := -O3 -Wall
+FCFLAGS   := 
+LDFLAGS   := -O3 -L$(SCALAPACKDIR)/lib -lsltmg -lscalapack -fopenmp -L$(PLASMADIR)/lib -lplasma  -lcoreblasqw -lcoreblas -lplasma -lquark  -llapacke -L/opt/share/INTEL/v15.app/composer_xe_2015.0.090/mkl/lib/intel64 -lmkl_gf_lp64 -lmkl_gnu_thread -lmkl_core -lpthread -lm
+
+# Extra user flags
+EXTRA_CCFLAGS = -I$(SCALAPACKDIR)/include -I$(PLASMADIR)/include -I. -I../common -I$(FITSIODIR)/include
+
+# Optimisation flags
+CCFLAGS += -DUSE_MATCOV_TILED -DMATCOV_SCALAPACK -DUSE_INTERSAMPLE
+CXXFLAGS := $(CCFLAGS)
+
+# DEBUG flags
+#CCFLAGS   += -g
+
+# PIC flags
+#CCFLAGS   += -fPIC 
+
+MAIN = moao_gb.c ../common/matcov_tiled.cpp ../common/intersample.c
+#SOURCE_FILES = $(filter-out $(MAIN), $(wildcard *.c))
+OBJ_FILES = $(patsubst %.c,%.o,$(SOURCE_FILES))
+
+#####################
+# default make rule #
+#####################
+
+TARGET = moao_gb
+
+.PHONY: all
+all: $(TARGET)
+
+$(TARGET): moao_gb.o matcov_tiled.o intersample.o
+	$(LD) $(FCFLAGS) $(EXTRA_CCFLAGS) $^ -o $@ $(LDFLAGS) $(EXTRA_LDFLAGS)
+
+%.o: %.c
+	$(CC) -c $(CCFLAGS) $(EXTRA_CCFLAGS) $^ -o $@
+
+matcov_%.o: ../common/matcov_%.cpp
+	$(CXX) -c $(CXXFLAGS) $(EXTRA_CCFLAGS) $< -o $@
+
+intersampl%.o: ../common/intersampl%.c
+	$(CC) -c $(CCFLAGS) $(EXTRA_CCFLAGS) $< -o $@
+
+.PHONY: clean
+clean:
+	rm -rf $(TARGET) *.o ../common/*.o

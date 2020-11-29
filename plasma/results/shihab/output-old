@@ -1,0 +1,197 @@
+nact 5120 nmeas 10240 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        10240    0.00473           1.588          599.561      601.154    555.934
+
+nact 5120 nmeas 15360 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        15360    0.00347           1.661          1078.227     1079.892   595.340
+
+nact 5120 nmeas 20480 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        20480    0.00341           1.711          1740.717     1742.431   610.840
+
+nact 5120 nmeas 25600 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        25600    0.00381           1.725          2774.935     2776.663   575.703
+
+nact 5120 nmeas 30720 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        30720    0.00388           1.628          3864.541     3866.173   580.797
+
+nact 5120 nmeas 35840 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        35840    0.00365           1.585          5153.615     5155.204   582.932
+
+nact 5120 nmeas 40960 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        40960    0.00357           1.688          6860.031     6861.723   565.099
+
+nact 5120 nmeas 46080 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        46080    0.00432           1.578          8925.215     8926.798   544.732
+
+nact 5120 nmeas 51200 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        51200    0.00328           1.544          11400.923    11402.469  522.747
+
+nact 5120 nmeas 56320 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        56320    0.00301           1.590          14281.863    14283.456  502.067
+
+nact 5120 nmeas 61440 ts 128
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        61440    0.00448           1.625          17512.495    17514.125  485.017
+
+nact 5120 nmeas 10240 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        10240    0.00544           1.191          532.747      533.943    625.914
+
+nact 5120 nmeas 20480 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        20480    0.00368           1.175          1495.150     1496.329   711.305
+
+nact 5120 nmeas 30720 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        30720    0.00356           1.149          3133.405     3134.558   716.357
+
+nact 5120 nmeas 40960 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        40960    0.00353           1.177          5598.527     5599.708   692.456
+
+nact 5120 nmeas 51200 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        51200    0.00344           1.159          8854.915     8856.077   673.053
+
+nact 5120 nmeas 10240 ts 512
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        10240    0.00536           0.025          591.495      591.525    564.984
+
+nact 5120 nmeas 20480 ts 512
+nact 5120 nmeas 30720 ts 512
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        30720    0.00340           0.021          3446.693     3446.718   651.479
+
+nact 5120 nmeas 40960 ts 512
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        40960    0.00335           0.020          6014.967     6014.991   644.648
+
+nact 5120 nmeas 51200 ts 512
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        51200    0.00344           0.021          9523.804     9523.828   625.863
+
+nact 5120 nmeas 20480 ts 1024
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        20480    0.00545           0.021          2121.865     2121.892   501.603
+
+nact 5120 nmeas 30720 ts 1024
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        30720    0.00349           0.017          4335.096     4335.116   517.971
+
+nact 5120 nmeas 40960 ts 1024
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        40960    0.00543           0.018          7544.873     7544.896   513.930
+
+nact 5120 nmeas 51200 ts 1024
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        51200    0.00350           0.016          10821.757    10821.777  550.798
+
+nact 5120 nmeas 61440 ts 1024
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        61440    0.00304           0.013          16311.028    16311.044  520.791
+
+nact 5120 nmeas 71680 ts 1024
+nact 5120 nmeas 61440 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        61440    0.00544           1.172          13281.183    13282.361  639.543
+
+nact 5120 nmeas 71680 ts 256
+nact 5120 nmeas 71680 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        71680    0.00487           1.182          18753.368    18754.555  612.099
+
+nact 5120 nmeas 81920 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        81920    0.00436           1.170          25476.667    25477.842  585.435
+
+nact 5120 nmeas 92160 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        92160    0.00556           1.176          33667.403    33668.585  558.460
+
+nact 5120 nmeas 102400 ts 256
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        102400   0.00395           1.149          42842.528    42843.681  540.114
+
+nact 5120 nmeas 71680 ts 512
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        71680    0.00541           0.024          20199.453    20199.482  568.314
+
+nact 5120 nmeas 81920 ts 512
+ Matrix    Matrix    MOAO alloc  MOAO preprocess  MOAO compute |   Total    |  Gflops/s
+ Dim row   Dim col   time (s)    time (s)         time (s)     |   time(s)  |  Perf
+ =======   =======   =========   ===============  ============ | ========== | ========
+ 5120        81920    0.00415           0.025          27136.089    27136.117  549.659
+
+nact 5120 nmeas 92160 ts 512
+nact 5120 nmeas 102400 ts 512

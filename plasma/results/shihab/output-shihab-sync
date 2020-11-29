@@ -1,0 +1,2438 @@
+
+Processing 5120 number of actuators and 10240 number of measurements
+Tile size (tunable): 256
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.003448(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.044981(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 550.419569(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   10240   10240   5120  0.00345        0.045        17.572    532.847    550.420        550.468    754.234
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 10240 number of measurements
+Tile size (tunable): 512
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002968(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.014055(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 474.321839(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   10240   10240   5120  0.00297        0.014        15.556    458.766    474.322        474.339    875.285
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 10240 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002825(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015277(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 481.700730(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   10240   10240   5120  0.00283        0.015        19.918    461.783    481.701        481.719    861.875
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 10240 number of measurements
+Tile size (tunable): 2048
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002857(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.028422(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 864.325390(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   10240   10240   5120  0.00286        0.028        48.824    815.501    864.325        864.357    480.336
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 12288 number of measurements
+Tile size (tunable): 256
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002900(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.044332(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 684.444012(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   12288   10240   5120  0.00290        0.044        26.535    657.908    684.444        684.491    784.777
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 12288 number of measurements
+Tile size (tunable): 512
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002826(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.013325(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 590.918828(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   12288   10240   5120  0.00283        0.013        22.970    567.949    590.919        590.935    909.023
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 12288 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002921(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015422(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 588.271329(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   12288   10240   5120  0.00292        0.015        27.113    561.158    588.271        588.290    913.110
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 12288 number of measurements
+Tile size (tunable): 2048
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002924(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.029425(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 987.979209(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   12288   10240   5120  0.00292        0.029        61.029    926.950    987.979        988.012    543.691
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 14336 number of measurements
+Tile size (tunable): 256
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002976(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.043951(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 841.811280(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   14336   10240   5120  0.00298        0.044        37.600    804.210    841.811        841.858    805.028
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 14336 number of measurements
+Tile size (tunable): 512
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002905(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.014011(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 710.425604(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   14336   10240   5120  0.00291        0.014        31.474    678.952    710.426        710.443    953.940
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 14336 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002978(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015136(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 704.910248(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   14336   10240   5120  0.00298        0.015        35.272    669.638    704.910        704.928    961.402
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 14336 number of measurements
+Tile size (tunable): 2048
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002935(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.027874(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1119.548475(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   14336   10240   5120  0.00293        0.028        73.888    1045.661   1119.548        1119.579   605.334
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 16384 number of measurements
+Tile size (tunable): 256
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002900(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.043947(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1011.551797(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   16384   10240   5120  0.00290        0.044        51.470    960.081    1011.552        1011.599   827.310
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 16384 number of measurements
+Tile size (tunable): 512
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002984(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.013727(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+
+Processing 5120 number of actuators and 16384 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002905(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015060(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 832.868357(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   16384   10240   5120  0.00290        0.015        46.702    786.166    832.868        832.886    1004.825
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 16384 number of measurements
+Tile size (tunable): 2048
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002829(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.028103(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1298.030709(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   16384   10240   5120  0.00283        0.028        87.114    1210.917   1298.031        1298.062   644.735
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 18432 number of measurements
+Tile size (tunable): 256
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002926(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.040718(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+Processing 5120 number of actuators and 18432 number of measurements
+Tile size (tunable): 512
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002974(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.013910(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 997.329390(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   18432   10240   5120  0.00297        0.014        55.849    941.480    997.329        997.346    1017.518
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 18432 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002815(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.014998(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 981.570447(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   18432   10240   5120  0.00282        0.015        58.214    923.356    981.570        981.588    1033.853
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 18432 number of measurements
+Tile size (tunable): 2048
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002983(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.028411(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1458.069909(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   18432   10240   5120  0.00298        0.028        103.390   1354.680   1458.070        1458.101   695.986
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 20480 number of measurements
+Tile size (tunable): 512
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002982(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.013925(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1155.701303(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   20480   10240   5120  0.00298        0.014        70.347    1085.355   1155.701        1155.718   1048.302
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 20480 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002965(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015110(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1131.739297(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   20480   10240   5120  0.00296        0.015        74.538    1057.201   1131.739        1131.757   1070.496
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 20480 number of measurements
+Tile size (tunable): 2048
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002961(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.028396(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1640.213680(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   20480   10240   5120  0.00296        0.028        121.035   1519.179   1640.214        1640.245   738.635
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 22528 number of measurements
+Tile size (tunable): 512
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002909(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.013745(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1348.926620(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   22528   10240   5120  0.00291        0.014        87.159    1261.767   1348.927        1348.943   1057.987
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 22528 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002945(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015166(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1301.478410(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   22528   10240   5120  0.00295        0.015        89.775    1211.703   1301.478        1301.497   1096.556
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 22528 number of measurements
+Tile size (tunable): 2048
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.003461(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.029001(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+Processing 5120 number of actuators and 24576 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002968(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015232(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1466.072924(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   24576   10240   5120  0.00297        0.015        106.202   1359.871   1466.073        1466.091   1133.470
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 26624 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002983(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015279(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1675.331271(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   26624   10240   5120  0.00298        0.015        128.159   1547.172   1675.331        1675.350   1143.311
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 28672 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002937(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015305(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 1876.988403(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   28672   10240   5120  0.00294        0.015        152.137   1724.852   1876.988        1877.007   1165.833
+
+PLASMA: done...
+
+
+Processing 5120 number of actuators and 30720 number of measurements
+Tile size (tunable): 1024
+Working on: 1 CPU cores
+
+PLASMA initializing with OmpSs... done
+
+Allocating matrix memory...Done in 0.002903(s)
+
+PLASMA: MOAO started
+
+PLASMA: MOAO Loading the interaction matrix Dx
+Done in 0.015239(s)
+
+PLASMA: MOAO main computation started with
+Maximum number of refinements 5
+Maximum number of observations 10
+
+nbrefine 1
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 2
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 3
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 4
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+
+nbrefine 5
+ nbobs 1
+ nbobs 2
+ nbobs 3
+ nbobs 4
+ nbobs 5
+ nbobs 6
+ nbobs 7
+ nbobs 8
+ nbobs 9
+ nbobs 10
+Done in 2061.687600(s)
+Computation successful :-)
+
+ Refine  Obs  Total   Total  Total MOAO alloc MOAO preprocess MOAO refine MOAO obs MOAO compute |   Total    |  Gflops/s
+ #iter  #iter #Meas #Meas-ts #Actu  time (s)   time (s)         time (s)   time(s)   time (s)   |   time(s)  |  Perf
+ ====== ===== ===== ======== ===== ========== =============== =========== ======== ============ | ========== | ========
+    5     10   30720   10240   5120  0.00290        0.015        177.524   1884.163   2061.688        2061.706   1203.057
+
+PLASMA: done...
+

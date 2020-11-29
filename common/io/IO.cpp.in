@@ -1,0 +1,101 @@
+#include <iostream>
+#include <sstream>
+#include <iterator>
+#include <stdexcept>
+#include "named.hpp"
+
+template<typename T>
+T openFile(std::string fn,std::ios_base::openmode om){
+    T stream;
+    stream.open(fn,om);
+
+    if(!stream.good()){
+        std::string except=std::string("Could not open file:'")+fn+std::string("'");
+        throw std::runtime_error(except);
+    }
+    return stream;
+}
+template std::ifstream openFile<std::ifstream>(std::string fn,std::ios_base::openmode om);
+template std::ofstream openFile<std::ofstream>(std::string fn,std::ios_base::openmode om);
+
+/*!\brief override ostream for std::vector
+ */
+template<typename T>
+std::ostream& operator<<(std::ostream& s, const std::vector<T>& v) {
+    char comma[3] = {'\0', ' ', '\0'};
+    for (const auto& e : v) {
+        s << comma << e;
+        comma[0] = ' ';
+    }
+    return s ;
+}
+/*!\brief override istream for std::vector
+ */
+template<typename T>
+std::istream& operator>>(std::istream& in, std::vector<T>& v) {
+
+    std::string line;
+
+    getline(in,line);
+    std::istringstream ss(line);
+    
+    std::copy(std::istream_iterator<T>(ss), std::istream_iterator<T>(), std::back_inserter(v));
+    return in;
+}
+
+
+// IOImpl class implementatio
+template<typename T>
+IOImpl<T>::IOImpl(T t):t_(t){};
+
+template<typename T>
+void IOImpl<T>::read(std::istream & in)
+{
+    in >> t_;
+}
+
+template<typename T>
+void IOImpl<T>::write(std::ostream & os) const
+{
+    os << t_;
+}
+
+template<typename T>
+void readIO(std::string filename, T & t)
+{
+    std::string e;
+    std::list<IO> v(std::move(t.getParams(e)));
+    std::ifstream in;
+    in.open(filename,std::ios::in);
+
+    if(in.is_open()){
+       for(auto & elem : v)
+            elem.read(in);
+        in.close();
+    }else{
+        throw std::runtime_error("Could not open file '"+filename+"'!");
+    }
+}
+// IO class implementation
+template<typename T>
+IO::IO(T t):ptr_(new IOImpl<T>(t)){}
+
+template<typename T>
+void writeIO(std::string filename, T & t)
+{
+    std::string e;
+    std::list<IO> v = t.getParams(e);
+        
+    std::ofstream os;
+    os.open(filename,std::ios::out);
+    if(os.is_open()){
+        for(auto & elem : v)
+            elem.write(os);
+        
+        std::cout << e << std::endl;
+        os.close();
+    }else{
+        throw std::runtime_error("Could not open file '"+filename+"'!");
+    }
+}
+
